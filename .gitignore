@@ -1,0 +1,15 @@
+# Ignore directories
+Include/
+Scripts/
+Lib/
+Library/
+__pycache__/
+build/
+
+# If these directories exist under different paths, ignore them globally
+**/Include/
+**/Scripts/
+**/Lib/
+**/Library/
+**/__pycache__/
+**/build/

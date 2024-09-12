@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="ui_files">
+    <file>boxWindow.ui</file>
+    <file>mainWindow.ui</file>
+  </qresource>
+</RCC>
