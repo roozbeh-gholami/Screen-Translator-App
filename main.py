@@ -16,6 +16,7 @@ import mss
 import pytesseract as pyt
 from deep_translator import GoogleTranslator
 from deep_translator.constants import GOOGLE_LANGUAGES_TO_CODES
+import os
 
 
 def loadUiClass(path):
@@ -29,7 +30,10 @@ def loadUiClass(path):
 # Function to capture and display the screen continuously
 def liveScreenCapture(bbox, close=False):
     img = [None]
-    pyt.pytesseract.tesseract_cmd = r"D:\Workspace\python\windowsTranslator\Tesseract-OCR\tesseract.exe"
+    # get current location of py file
+    py_location = os.path.dirname(os.path.realpath(__file__))
+    # set the path to tesseract.exe
+    pyt.pytesseract.tesseract_cmd = os.path.join(py_location, 'Tesseract-OCR', 'tesseract.exe')
     with mss.mss() as sct:
         if not close:
         # while True:
