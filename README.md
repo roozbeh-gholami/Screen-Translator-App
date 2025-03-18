@@ -26,7 +26,7 @@ Clone the repository and install required dependencies:
 
 ## Usage
 ### Running the App (Windows)
-If ui files are change, the Simply run the `run.bat` file to start the application:
+If `.ui` files are change, the Simply run the `run.bat` file to start the application:
 ```bash
  run.bat
 ```
