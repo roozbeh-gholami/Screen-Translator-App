@@ -3,11 +3,11 @@
 block_cipher = None
 
 
-a = Analysis(['translatorAppQT.py'],
+a = Analysis(['main.py'],
              pathex=[],
              binaries=[],
-             datas=[],
-             hiddenimports=[],
+             datas=[('*.ui', '.'), ('Tesseract-OCR', 'Tesseract-OCR')],
+             hiddenimports=['PyQt5.sip'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
