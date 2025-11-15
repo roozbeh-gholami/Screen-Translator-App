@@ -11,6 +11,7 @@ dist/
 Tesseract-OCR/
 test.png
 translatorApp.py
+installer/output/
 
 # If these directories exist under different paths, ignore them globally
 **/Include/
