@@ -158,6 +158,7 @@ class MainWindow (QMainWindow, loadUiClass(':/ui_files/mainWindow.ui')):
         try:
             # self.boxDialog.translateBtn.setText("Translating...")
             text = pyt.image_to_string(img)
+            print(f"extracted text: {text}")
             print("translation is started")
             # Call the function to translate the text
             from_code = self.fromCBox.currentText().split(' - ')[1]

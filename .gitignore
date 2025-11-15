@@ -1,4 +1,6 @@
 # Ignore directories
+share/
+pyvenv.cfg
 Include/
 Scripts/
 Lib/
