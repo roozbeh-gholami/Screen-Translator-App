@@ -9,9 +9,9 @@ __pycache__/
 build/
 dist/
 Tesseract-OCR/
-pyvenv.cfg
 test.png
 translatorApp.py
+
 # If these directories exist under different paths, ignore them globally
 **/Include/
 **/Scripts/
@@ -19,3 +19,4 @@ translatorApp.py
 **/Library/
 **/__pycache__/
 **/build/
+**/dist/
