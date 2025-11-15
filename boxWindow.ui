@@ -12,93 +12,198 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>520</width>
-    <height>250</height>
+    <width>200</width>
+    <height>150</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1080</width>
-    <height>251</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Translation Capture Area</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">
+QDialog {
+    background-color: transparent;
+    border: 5px solid #4a90e2;
+    border-radius: 8px;
+}
+
+QLabel#frameLbl {
+    background-color: rgba(74, 144, 226, 30);
+    border: 5px solid #4a90e2;
+    border-radius: 4px;
+}
+
+QPushButton {
+    background-color: rgba(74, 144, 226, 200);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 11pt;
+    min-height: 30px;
+}
+
+QPushButton:hover {
+    background-color: rgba(53, 122, 189, 220);
+}
+
+QPushButton:pressed {
+    background-color: rgba(42, 90, 138, 240);
+}
+
+QPushButton#translateBtn {
+    background-color: rgba(40, 167, 69, 200);
+    min-width: 120px;
+}
+
+QPushButton#translateBtn:hover {
+    background-color: rgba(30, 126, 52, 220);
+}
+
+QDialogButtonBox QPushButton {
+    min-width: 80px;
+    background-color: rgba(108, 117, 125, 200);
+}
+
+QDialogButtonBox QPushButton:hover {
+    background-color: rgba(90, 98, 104, 220);
+}
+</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="frameLbl">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="titleBar">
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>200</height>
+         <height>30</height>
         </size>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::Box</enum>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
        </property>
-       <property name="lineWidth">
-        <number>4</number>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QLabel {
+    background-color: rgba(74, 144, 226, 220);
+    color: white;
+    padding: 5px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+</string>
        </property>
        <property name="text">
-        <string/>
+        <string></string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QDialogButtonBox" name="buttonBox">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="standardButtons">
-          <set>QDialogButtonBox::Close|QDialogButtonBox::Ok</set>
-         </property>
-         <property name="centerButtons">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="translateBtn">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="frameLbl">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-           <underline>false</underline>
-           <strikeout>false</strikeout>
-          </font>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="lineWidth">
+          <number>4</number>
          </property>
          <property name="text">
-          <string>Translate</string>
+          <string></string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QLabel {
+    background-color: transparent;
+    border: 5px solid #4a90e2;
+    border-radius: 4px;
+}
+</string>
          </property>
         </widget>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QDialogButtonBox" name="buttonBox">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="standardButtons">
+            <set>QDialogButtonBox::Close|QDialogButtonBox::Ok</set>
+           </property>
+           <property name="centerButtons">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="translateBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+             <underline>false</underline>
+             <strikeout>false</strikeout>
+            </font>
+           </property>
+           <property name="text">
+            <string>Translate</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
